@@ -1,0 +1,210 @@
+/* UNIVERSAL/MISCELLANIOUS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Neue Machina Light";
+}
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+span::selection {
+  background-color: #00a6ffa4;
+}
+::-webkit-scrollbar {
+  width: 0.5vh;
+  border-radius: 50%;
+  background-color: #00a6ffa4;
+  height: 30px;
+}
+/* LANDING PAGE CSS */
+#landing {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+  background-color: #000000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+nav h2,
+h4 {
+  font-size: 1.5vw;
+}
+#hero-heading {
+  margin-top: 6%;
+  margin-left: 3%;
+  text-transform: uppercase;
+}
+#hero-heading div {
+  display: inline-block;
+}
+#hero-heading div h1 {
+  margin-left: 10vw;
+}
+#hero-heading div h4 {
+  text-align: right;
+  font-size: 1.8vw;
+}
+#landing h1 {
+  font-size: 9vw;
+}
+#hero-footer {
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+#hero-footer h3 {
+  font-size: 2vw;
+}
+#footer-icon {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+#footer-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  z-index: 1; /* Keep this element above the icon but under the text */
+  transition: all 0.3s ease;
+}
+#footer-icon i {
+  padding: 1vh 0.8vh;
+  position: relative;
+  font-size: 3vh;
+  z-index: 2; /* Ensure the icon is always above the pseudo-element */
+}
+#footer-icon:hover {
+  color: black !important;
+}
+#footer-icon:hover::after {
+  top: 0;
+  color: #000;
+}
+/* FIRST PAGE CSS */
+.seperator {
+  background-color: white;
+  height: 0.2vw;
+}
+#first-page {
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding-top: 3vh;
+}
+#first-page h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 3%;
+  font-size: 2.5vw;
+}
+#services-container {
+  width: 100%;
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+}
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  font-size: 3.5vw;
+  border-top: 1px solid #fff;
+  cursor: cell;
+}
+.serve-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+.service-body {
+  max-height: 500px; /* Set to the maximum height you expect */
+  opacity: 1; /* Show content when expanded */
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-box {
+  width: 55%;
+  font-size: 1.5vw;
+  text-align: justify;
+  margin-bottom: 4vh;
+}
+.service-img {
+  height: 18rem;
+  width: 40%;
+  background-color: white;
+  margin-top: 1vh;
+}
+.service-header i {
+  padding: 10px 20px;
+  transition: transform 0.3s ease;
+}
+#services-container .service-body + .service-header {
+  border-bottom: 1px solid #fff;
+}
+.icon-rotate {
+  transform: rotate(228deg); /* Rotate the icon when expanded */
+  color: red;
+}
+
+/* SECOND PAGE CSS START */
+#main-slider {
+  padding-top: 30vh;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  position: relative;
+}
+#slider {
+  text-align: center;
+  font-family: "Neue Machina Light";
+  font-size: 9vw;
+  text-wrap: nowrap;
+  overflow-x: hidden;
+}
+#boundaries {
+  background: -webkit-linear-gradient(right, #fff, #00a6ffa4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+/* RESPONSIVENESS */
+@media (max-width:380px){
+  nav{
+    border-bottom: 2px solid #ffffffc4;
+  }
+  nav h2,h4{
+    font-size: 12px !important;
+  }
+  #hero-heading{
+    margin-top: 20%;
+  }
+  #hero-heading h1{
+    font-size: 50px;
+  }
+  #hero-heading h4{
+    margin-left: 21% !important;
+    font-size:10px !important;
+  }
+}
